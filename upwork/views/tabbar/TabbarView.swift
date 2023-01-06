@@ -13,15 +13,20 @@ struct TabbarView: View {
 
     init(viewModel: TabbarViewModel) {
         self.viewModel = viewModel
+#if os(iOS)
+        UITabBar.appearance().backgroundColor = UIColor(named: "DarkBlueColor")
+#endif
     }
 
     var body: some View {
         TabView {
             EmployeesListView(viewModel: EmployeesListViewModel())
+                .navigationTitle("Here")
                 .tabItem {
-                   Image(systemName: "person.2")
+                    Image(systemName: "person.2")
                 }
-            EmployeeDetailView(viewModel: EmployeeDetailViewModel())
+
+            WeekDataView(viewModel: WeekDataViewModel())
                 .tabItem {
                     Image(systemName: "timer")
                 }
