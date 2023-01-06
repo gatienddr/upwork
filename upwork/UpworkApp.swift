@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct upworkApp: App {
+struct UpworkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabbarView(viewModel: TabbarViewModel())
         }
     }
 }
