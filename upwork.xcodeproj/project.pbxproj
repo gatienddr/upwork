@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5F40FA329680FAD00878B00 /* upworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA229680FAD00878B00 /* upworkApp.swift */; };
-		D5F40FA529680FAD00878B00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA429680FAD00878B00 /* ContentView.swift */; };
+		D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA229680FAD00878B00 /* UpworkApp.swift */; };
+		D5F40FA529680FAD00878B00 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA429680FAD00878B00 /* TabbarView.swift */; };
 		D5F40FA729680FAE00878B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F40FA629680FAE00878B00 /* Assets.xcassets */; };
 		D5F40FAA29680FAE00878B00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F40FA929680FAE00878B00 /* Preview Assets.xcassets */; };
+		D5F40FB22968142B00878B00 /* EmployeesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FB12968142B00878B00 /* EmployeesListView.swift */; };
+		D5F40FB5296814E300878B00 /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FB4296814E300878B00 /* EmployeeDetailView.swift */; };
+		D5F40FBB296816EA00878B00 /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FBA296816EA00878B00 /* TabbarViewModel.swift */; };
+		D5F40FBD2968170E00878B00 /* EmployeesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FBC2968170E00878B00 /* EmployeesListViewModel.swift */; };
+		D5F40FC02968173F00878B00 /* EmployeeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FBF2968173F00878B00 /* EmployeeDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D5F40F9F29680FAD00878B00 /* upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5F40FA229680FAD00878B00 /* upworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upworkApp.swift; sourceTree = "<group>"; };
-		D5F40FA429680FAD00878B00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D5F40FA229680FAD00878B00 /* UpworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkApp.swift; sourceTree = "<group>"; };
+		D5F40FA429680FAD00878B00 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		D5F40FA629680FAE00878B00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5F40FA929680FAE00878B00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D5F40FB12968142B00878B00 /* EmployeesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListView.swift; sourceTree = "<group>"; };
+		D5F40FB4296814E300878B00 /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
+		D5F40FBA296816EA00878B00 /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
+		D5F40FBC2968170E00878B00 /* EmployeesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListViewModel.swift; sourceTree = "<group>"; };
+		D5F40FBF2968173F00878B00 /* EmployeeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,8 @@
 		D5F40FA129680FAD00878B00 /* upwork */ = {
 			isa = PBXGroup;
 			children = (
-				D5F40FA229680FAD00878B00 /* upworkApp.swift */,
-				D5F40FA429680FAD00878B00 /* ContentView.swift */,
+				D5F40FB62968162F00878B00 /* Views */,
+				D5F40FA229680FAD00878B00 /* UpworkApp.swift */,
 				D5F40FA629680FAE00878B00 /* Assets.xcassets */,
 				D5F40FA829680FAE00878B00 /* Preview Content */,
 			);
@@ -67,6 +77,43 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D5F40FB0296813E600878B00 /* EmployeesList */ = {
+			isa = PBXGroup;
+			children = (
+				D5F40FB12968142B00878B00 /* EmployeesListView.swift */,
+				D5F40FBC2968170E00878B00 /* EmployeesListViewModel.swift */,
+			);
+			path = EmployeesList;
+			sourceTree = "<group>";
+		};
+		D5F40FB3296814BB00878B00 /* EmployeeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D5F40FB4296814E300878B00 /* EmployeeDetailView.swift */,
+				D5F40FBF2968173F00878B00 /* EmployeeDetailViewModel.swift */,
+			);
+			path = EmployeeDetail;
+			sourceTree = "<group>";
+		};
+		D5F40FB62968162F00878B00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5F40FB72968166200878B00 /* Tabbar */,
+				D5F40FB0296813E600878B00 /* EmployeesList */,
+				D5F40FB3296814BB00878B00 /* EmployeeDetail */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5F40FB72968166200878B00 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D5F40FA429680FAD00878B00 /* TabbarView.swift */,
+				D5F40FBA296816EA00878B00 /* TabbarViewModel.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +121,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5F40FAD29680FAE00878B00 /* Build configuration list for PBXNativeTarget "upwork" */;
 			buildPhases = (
+				D5F40FC1296817F600878B00 /* ShellScript */,
 				D5F40F9B29680FAD00878B00 /* Sources */,
 				D5F40F9C29680FAD00878B00 /* Frameworks */,
 				D5F40F9D29680FAD00878B00 /* Resources */,
@@ -132,13 +180,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D5F40FC1296817F600878B00 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5F40F9B29680FAD00878B00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F40FA529680FAD00878B00 /* ContentView.swift in Sources */,
-				D5F40FA329680FAD00878B00 /* upworkApp.swift in Sources */,
+				D5F40FA529680FAD00878B00 /* TabbarView.swift in Sources */,
+				D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */,
+				D5F40FBB296816EA00878B00 /* TabbarViewModel.swift in Sources */,
+				D5F40FB5296814E300878B00 /* EmployeeDetailView.swift in Sources */,
+				D5F40FC02968173F00878B00 /* EmployeeDetailViewModel.swift in Sources */,
+				D5F40FBD2968170E00878B00 /* EmployeesListViewModel.swift in Sources */,
+				D5F40FB22968142B00878B00 /* EmployeesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
