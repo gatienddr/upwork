@@ -20,6 +20,8 @@
 		D5F40FC429681BEE00878B00 /* WeekDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FC329681BEE00878B00 /* WeekDataView.swift */; };
 		D5F40FC629681C0800878B00 /* WeekDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FC529681C0800878B00 /* WeekDataViewModel.swift */; };
 		D5F40FC92968203F00878B00 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FC82968203F00878B00 /* Employee.swift */; };
+		D5F40FCC2968704400878B00 /* SmallTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FCB2968704400878B00 /* SmallTileView.swift */; };
+		D5F40FCE296870C100878B00 /* SmallTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FCD296870C100878B00 /* SmallTileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		D5F40FC329681BEE00878B00 /* WeekDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataView.swift; sourceTree = "<group>"; };
 		D5F40FC529681C0800878B00 /* WeekDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataViewModel.swift; sourceTree = "<group>"; };
 		D5F40FC82968203F00878B00 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		D5F40FCB2968704400878B00 /* SmallTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTileView.swift; sourceTree = "<group>"; };
+		D5F40FCD296870C100878B00 /* SmallTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		D5F40FB62968162F00878B00 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D5F40FCA29686B7500878B00 /* smallTile */,
 				D5F40FB72968166200878B00 /* tabbar */,
 				D5F40FB0296813E600878B00 /* employeesList */,
 				D5F40FB3296814BB00878B00 /* employeeDetail */,
@@ -140,6 +145,15 @@
 				C6F6A6212969F19F001B4DAB /* WeekData.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		D5F40FCA29686B7500878B00 /* smallTile */ = {
+			isa = PBXGroup;
+			children = (
+				D5F40FCB2968704400878B00 /* SmallTileView.swift */,
+				D5F40FCD296870C100878B00 /* SmallTileViewModel.swift */,
+			);
+			path = smallTile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +252,9 @@
 				D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */,
 				D5F40FC629681C0800878B00 /* WeekDataViewModel.swift in Sources */,
 				D5F40FC92968203F00878B00 /* Employee.swift in Sources */,
+				D5F40FCC2968704400878B00 /* SmallTileView.swift in Sources */,
 				D5F40FBB296816EA00878B00 /* TabbarViewModel.swift in Sources */,
+				D5F40FCE296870C100878B00 /* SmallTileViewModel.swift in Sources */,
 				D5F40FB5296814E300878B00 /* EmployeeDetailView.swift in Sources */,
 				D5F40FC02968173F00878B00 /* EmployeeDetailViewModel.swift in Sources */,
 				D5F40FBD2968170E00878B00 /* EmployeesListViewModel.swift in Sources */,
