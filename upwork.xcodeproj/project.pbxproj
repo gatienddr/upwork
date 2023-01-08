@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C6F6A6222969F19F001B4DAB /* WeekData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F6A6212969F19F001B4DAB /* WeekData.swift */; };
 		D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA229680FAD00878B00 /* UpworkApp.swift */; };
 		D5F40FA529680FAD00878B00 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA429680FAD00878B00 /* TabbarView.swift */; };
 		D5F40FA729680FAE00878B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F40FA629680FAE00878B00 /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C6F6A6212969F19F001B4DAB /* WeekData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekData.swift; sourceTree = "<group>"; };
 		D5F40F9F29680FAD00878B00 /* upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F40FA229680FAD00878B00 /* UpworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkApp.swift; sourceTree = "<group>"; };
 		D5F40FA429680FAD00878B00 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				D5F40FC82968203F00878B00 /* Employee.swift */,
-				C6F6A6212969F19F001B4DAB /* WeekData.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F40FA529680FAD00878B00 /* TabbarView.swift in Sources */,
-				C6F6A6222969F19F001B4DAB /* WeekData.swift in Sources */,
 				D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */,
 				D5F40FC629681C0800878B00 /* WeekDataViewModel.swift in Sources */,
 				D5F40FC92968203F00878B00 /* Employee.swift in Sources */,
