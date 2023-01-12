@@ -13,9 +13,6 @@ struct TabbarView: View {
 
     init(viewModel: TabbarViewModel) {
         self.viewModel = viewModel
-#if os(iOS)
-        UITabBar.appearance().backgroundColor = UIColor(named: "DarkBlueColor")
-#endif
     }
 
     var body: some View {
@@ -30,5 +27,6 @@ struct TabbarView: View {
                     Image(systemName: "timer")
                 }
         }
+
     }
 }

@@ -9,6 +9,5 @@ import Foundation
 import SwiftUI
 
 class WeekDataViewModel: ObservableObject {
-    
-}
 
+}
