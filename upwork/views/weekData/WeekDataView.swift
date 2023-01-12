@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct WeekDataView: View {
-    
+
     private var viewModel: WeekDataViewModel
-    
+
     init(viewModel: WeekDataViewModel) {
         self.viewModel = viewModel
     }
-    
+
     var body: some View {
         ScrollView {
             Text("Cette semaine")
@@ -49,10 +49,10 @@ struct CardModifier: ViewModifier {
 }
 
 struct HoursCard: View {
-    
+
     var image: String
     var hours: Double
-    
+
     var body: some View {
         HStack(alignment: .center) {
             Image(image)
@@ -81,10 +81,10 @@ struct HoursCard: View {
 }
 
 struct EmployeesCard: View {
-    
+
     var image: String
     var numberEmployees: Double
-    
+
     var body: some View {
         VStack(alignment: .center) {
             Image(image)
@@ -111,10 +111,10 @@ struct EmployeesCard: View {
 }
 
 struct HoursPerEmployeeCard: View {
-    
+
     var image: String
     var hours: Double
-    
+
     var body: some View {
         VStack(alignment: .center) {
             Image(image)
@@ -147,10 +147,10 @@ struct HoursPerEmployeeCard: View {
 }
 
 struct EmployeeInVacationCard: View {
-    
+
     var image: String
     var numberOfEmployeeInVacation: Double
-    
+
     var body: some View {
         VStack(alignment: .center) {
             Image(image)
@@ -183,10 +183,10 @@ struct EmployeeInVacationCard: View {
 }
 
 struct NumberOFHoursPerDayCard: View {
-    
+
     var image: String
     var hours: Double
-    
+
     var body: some View {
         VStack(alignment: .center) {
             Image(image)
