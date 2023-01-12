@@ -65,7 +65,7 @@ struct HoursCard: View {
                     Text(String.init(format: "%0.0f", hours))
                         .font(.system(size: 23, weight: .bold, design: .default))
                         .foregroundColor(.white)
-                    Text("heure(s)")
+                    Text("heures")
                         .font(.system(size: 23, weight: .bold, design: .default))
                     .foregroundColor(.white)                }
             }
@@ -169,7 +169,7 @@ struct EmployeeInVacationCard: View {
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.white)
             }
-            Text("en congés")
+            Text("en congé(s)")
                 .font(.system(size: 18, weight: .bold, design: .default))
                 .foregroundColor(.white)
                 .padding(.bottom, 20)
