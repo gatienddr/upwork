@@ -21,7 +21,6 @@ struct TabbarView: View {
     var body: some View {
         TabView {
             EmployeesListView(viewModel: EmployeesListViewModel())
-                .navigationTitle("Here")
                 .tabItem {
                     Image(systemName: "person.2")
                 }
