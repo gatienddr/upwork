@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct TabbarView: View {
+@MainActor struct TabbarView: View {
 
     private var viewModel: TabbarViewModel
+
+    private var employeesViewModel = EmployeesListViewModel()
 
     init(viewModel: TabbarViewModel) {
         self.viewModel = viewModel
@@ -17,7 +19,7 @@ struct TabbarView: View {
 
     var body: some View {
         TabView {
-            EmployeesListView(viewModel: EmployeesListViewModel())
+            EmployeesListView(viewModel: employeesViewModel)
                 .tabItem {
                     Image(systemName: "person.2")
                 }

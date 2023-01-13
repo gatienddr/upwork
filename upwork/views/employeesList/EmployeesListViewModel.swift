@@ -7,14 +7,17 @@
 
 import Foundation
 
-class EmployeesListViewModel: ObservableObject {
+@MainActor class EmployeesListViewModel: ObservableObject {
 
-    @Published var employees: [Employee] = [
-        Employee(firstname: "Clément", lastname: "Dudit", isWorking: true),
-        Employee(firstname: "Louis", lastname: "Cauret", isWorking: true),
-        Employee(firstname: "Antoine", lastname: "Lucchini", isWorking: false),
-        Employee(firstname: "Gatien", lastname: "Didry", isWorking: true),
-        Employee(firstname: "Marie", lastname: "Dugoua", isWorking: true)
-    ]
-
+    @Published var employees: [Employee] = []
+    init() {
+        Task {
+            do {
+                self.employees = try await ApiService.getEmpoloyees()
+            } catch {
+                print(error)
+                print("error dans le catch")
+            }
+        }
+    }
 }
