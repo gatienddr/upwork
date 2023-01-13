@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmployeesListView: View {
 
-    private var viewModel: EmployeesListViewModel
+    @ObservedObject private var viewModel: EmployeesListViewModel
 
     init(viewModel: EmployeesListViewModel) {
         self.viewModel = viewModel
@@ -18,9 +18,10 @@ struct EmployeesListView: View {
         NavigationView {
             List {
                 ForEach(self.viewModel.employees) { employee in
+
                     NavigationLink {
-                        EmployeeDetailView(viewModel: EmployeeDetailViewModel())
-                            .navigationTitle("\(employee.firstname) \(employee.lastname)")
+                        EmployeeDetailView(viewModel: EmployeeDetailViewModel(idUser: employee.id))
+                            .navigationTitle("\(employee.name)")
                     } label: {
                         HStack {
                             VStack {}
@@ -29,7 +30,7 @@ struct EmployeesListView: View {
                                     Color(employee.isWorking ? .green : .red)
                                 })
                                 .cornerRadius(5)
-                            Text("\(employee.firstname) \(employee.lastname)")
+                            Text("\(employee.name)")
                                 .padding([.leading], 0.5)
                         }
 

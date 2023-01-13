@@ -7,17 +7,20 @@
 
 import Foundation
 
-class Employee: Identifiable {
+class Employee: Identifiable, Codable {
 
-    var firstname: String
+    var id: String
 
-    var lastname: String
+    var name: String
 
     var isWorking: Bool
 
-    init(firstname: String, lastname: String, isWorking: Bool) {
-        self.firstname = firstname
-        self.lastname = lastname
+    var records: [Record]
+
+    init(id: String, name: String, isWorking: Bool) {
+        self.id = id
+        self.name = name
         self.isWorking = isWorking
+        self.records = []
     }
 }

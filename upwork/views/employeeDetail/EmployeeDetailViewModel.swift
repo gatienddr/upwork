@@ -8,4 +8,11 @@
 import Foundation
 
 class EmployeeDetailViewModel {
+
+    var idUser: String
+
+    init(idUser: String) {
+        self.idUser = idUser
+    }
+
 }
