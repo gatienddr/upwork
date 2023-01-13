@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C6F6A6222969F19F001B4DAB /* WeekData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F6A6212969F19F001B4DAB /* WeekData.swift */; };
+		D503AC9929701A3E00296C99 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503AC9829701A3E00296C99 /* ApiService.swift */; };
+		D56FB04A297147DE00864A6E /* EmployeeDataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FB049297147DE00864A6E /* EmployeeDataRecord.swift */; };
+		D56FB04C2971480900864A6E /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FB04B2971480900864A6E /* Record.swift */; };
+		D56FB04E2971483700864A6E /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FB04D2971483700864A6E /* ApiError.swift */; };
 		D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA229680FAD00878B00 /* UpworkApp.swift */; };
 		D5F40FA529680FAD00878B00 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FA429680FAD00878B00 /* TabbarView.swift */; };
 		D5F40FA729680FAE00878B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F40FA629680FAE00878B00 /* Assets.xcassets */; };
-		D5F40FAA29680FAE00878B00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F40FA929680FAE00878B00 /* Preview Assets.xcassets */; };
 		D5F40FB22968142B00878B00 /* EmployeesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FB12968142B00878B00 /* EmployeesListView.swift */; };
 		D5F40FB5296814E300878B00 /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FB4296814E300878B00 /* EmployeeDetailView.swift */; };
 		D5F40FBB296816EA00878B00 /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F40FBA296816EA00878B00 /* TabbarViewModel.swift */; };
@@ -26,11 +29,15 @@
 
 /* Begin PBXFileReference section */
 		C6F6A6212969F19F001B4DAB /* WeekData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekData.swift; sourceTree = "<group>"; };
+		D503AC9829701A3E00296C99 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		D56FB048297144D500864A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D56FB049297147DE00864A6E /* EmployeeDataRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataRecord.swift; sourceTree = "<group>"; };
+		D56FB04B2971480900864A6E /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		D56FB04D2971483700864A6E /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		D5F40F9F29680FAD00878B00 /* upwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F40FA229680FAD00878B00 /* UpworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkApp.swift; sourceTree = "<group>"; };
 		D5F40FA429680FAD00878B00 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		D5F40FA629680FAE00878B00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D5F40FA929680FAE00878B00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5F40FB12968142B00878B00 /* EmployeesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListView.swift; sourceTree = "<group>"; };
 		D5F40FB4296814E300878B00 /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
 		D5F40FBA296816EA00878B00 /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
@@ -54,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D503AC96297019F600296C99 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				D503AC9829701A3E00296C99 /* ApiService.swift */,
+			);
+			name = services;
+			path = ../services;
+			sourceTree = "<group>";
+		};
 		D5F40F9629680FAD00878B00 = {
 			isa = PBXGroup;
 			children = (
@@ -73,21 +89,14 @@
 		D5F40FA129680FAD00878B00 /* upwork */ = {
 			isa = PBXGroup;
 			children = (
+				D56FB048297144D500864A6E /* Info.plist */,
+				D503AC96297019F600296C99 /* services */,
 				D5F40FC72968200F00878B00 /* models */,
 				D5F40FB62968162F00878B00 /* views */,
 				D5F40FA229680FAD00878B00 /* UpworkApp.swift */,
 				D5F40FA629680FAE00878B00 /* Assets.xcassets */,
-				D5F40FA829680FAE00878B00 /* Preview Content */,
 			);
 			path = upwork;
-			sourceTree = "<group>";
-		};
-		D5F40FA829680FAE00878B00 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				D5F40FA929680FAE00878B00 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		D5F40FB0296813E600878B00 /* employeesList */ = {
@@ -143,6 +152,9 @@
 			children = (
 				D5F40FC82968203F00878B00 /* Employee.swift */,
 				C6F6A6212969F19F001B4DAB /* WeekData.swift */,
+				D56FB049297147DE00864A6E /* EmployeeDataRecord.swift */,
+				D56FB04B2971480900864A6E /* Record.swift */,
+				D56FB04D2971483700864A6E /* ApiError.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -215,7 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F40FAA29680FAE00878B00 /* Preview Assets.xcassets in Resources */,
 				D5F40FA729680FAE00878B00 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,17 +259,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F40FA529680FAD00878B00 /* TabbarView.swift in Sources */,
+				D56FB04E2971483700864A6E /* ApiError.swift in Sources */,
 				C6F6A6222969F19F001B4DAB /* WeekData.swift in Sources */,
 				D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */,
 				D5F40FC629681C0800878B00 /* WeekDataViewModel.swift in Sources */,
 				D5F40FC92968203F00878B00 /* Employee.swift in Sources */,
 				D5F40FCC2968704400878B00 /* SmallTileView.swift in Sources */,
+				D56FB04C2971480900864A6E /* Record.swift in Sources */,
 				D5F40FBB296816EA00878B00 /* TabbarViewModel.swift in Sources */,
 				D5F40FCE296870C100878B00 /* SmallTileViewModel.swift in Sources */,
 				D5F40FB5296814E300878B00 /* EmployeeDetailView.swift in Sources */,
+				D56FB04A297147DE00864A6E /* EmployeeDataRecord.swift in Sources */,
 				D5F40FC02968173F00878B00 /* EmployeeDetailViewModel.swift in Sources */,
 				D5F40FBD2968170E00878B00 /* EmployeesListViewModel.swift in Sources */,
 				D5F40FC429681BEE00878B00 /* WeekDataView.swift in Sources */,
+				D503AC9929701A3E00296C99 /* ApiService.swift in Sources */,
 				D5F40FB22968142B00878B00 /* EmployeesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,10 +402,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"upwork/Preview Content\"";
 				DEVELOPMENT_TEAM = W5GL4YVL8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = upwork/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,10 +435,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"upwork/Preview Content\"";
 				DEVELOPMENT_TEAM = W5GL4YVL8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = upwork/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
