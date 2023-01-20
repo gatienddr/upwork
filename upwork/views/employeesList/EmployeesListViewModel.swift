@@ -11,13 +11,17 @@ import Foundation
 
     @Published var employees: [Employee] = []
 
+    @Published var isConnectedToApi: Bool?
+
     init() {
         Task {
             do {
-                self.employees = try await ApiService.getEmpoloyees()
+                self.employees = try await ApiService.getEmployees()
+                self.isConnectedToApi = true
             } catch {
                 print(error)
                 print("error dans le catch")
+                self.isConnectedToApi = false
             }
         }
     }

@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct WeekData {
-    var numberHoursWorked: Int
-    var numberOfEmployees: Int
-    var numberHoursPerEmployees: Int
-    var numberOfEmployeesOut: Int
-    var numberOfHoursPerDay: Int
+struct WeekData: Codable {
+    var hoursWorked: Float?
+    var numberOfEmployees: Int?
+    var averageWorkedHoursByEmployee: Float?
+    var hoursWorkedByDay: Float?
 }

@@ -10,4 +10,15 @@ import SwiftUI
 
 class WeekDataViewModel: ObservableObject {
 
+    @Published var weekData: WeekData?
+    init() {
+        print("weekData init")
+        Task {
+            do {
+                weekData = try await ApiService.getWeedData()
+            } catch {
+                print(error)
+            }
+        }
+    }
 }

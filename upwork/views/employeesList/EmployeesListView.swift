@@ -17,6 +17,15 @@ struct EmployeesListView: View {
     var body: some View {
         NavigationView {
             List {
+                if !(viewModel.isConnectedToApi != nil && viewModel.isConnectedToApi == true ) {
+
+                    HStack {
+                        Text("Erreur dans la connexion à l'api")
+                            .foregroundColor(.white)
+                    }
+                    .background(.red)
+
+                }
                 ForEach(self.viewModel.employees) { employee in
 
                     NavigationLink {
@@ -41,7 +50,7 @@ struct EmployeesListView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Text("Time management")
+                    Text("Upwork")
                         .font(.title)
                         .foregroundColor(Color(UIColor(named: "DarkBlueColor")!))
                 }

@@ -28,27 +28,27 @@ struct EmployeeDetailView: View {
                 Spacer()
                 SmallTileView(
                     viewModel: SmallTileViewModel(
-                        topWord: "\(viewModel.detailUser?.today.workedHours ?? "empty")",
+                        topWord: "\(viewModel.detailUser?.today.workedHours ?? "🙅🏻")",
                         subWord: "travaillées")
                 )
 
                 SmallTileView(
                     viewModel: SmallTileViewModel(
-                        topWord: "\(viewModel.detailUser?.today.credit ?? "empty")",
+                        topWord: "\(viewModel.detailUser?.today.credit ?? "🙅🏻")",
                         subWord: "crédit")
                 )
                 .padding([.leading], 2)
 
                 SmallTileView(
                     viewModel: SmallTileViewModel(
-                        topWord: "\(viewModel.detailUser?.today.startHour ?? "empty")",
+                        topWord: "\(viewModel.detailUser?.today.startHour ?? "🙅🏻")",
                         subWord: "arrivée")
                 )
                 .padding([.leading], 2)
 
                 SmallTileView(
                     viewModel: SmallTileViewModel(
-                        topWord: "\(viewModel.detailUser?.today.endHour ?? "empty")",
+                        topWord: "\(viewModel.detailUser?.today.endHour ?? "🙅🏻")",
                         subWord: "départ")
                 )
                 .padding([.leading], 2)
