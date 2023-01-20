@@ -13,11 +13,11 @@ class Employee: Identifiable, Codable {
 
     var name: String
 
-    var isWorking: Bool
+    var isWorking: Bool?
 
-    var records: [Record]
+    var records: [Record]?
 
-    init(id: String, name: String, isWorking: Bool) {
+    init(id: String, name: String, isWorking: Bool?) {
         self.id = id
         self.name = name
         self.isWorking = isWorking

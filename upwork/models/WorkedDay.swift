@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct WorkedDay: Codable {
+struct WorkedDay: Codable, Identifiable {
     let date, workedHours: String
+
+    let id = UUID().uuidString
+
 }

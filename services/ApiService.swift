@@ -8,9 +8,27 @@
 import Foundation
 
 class ApiService {
-    static let domain = "http://10.33.3.14:3000/"
+    static let domain = "http://172.20.10.3:3000/"
+
     static func getEmpoloyees() async throws -> [Employee] {
-        let url = domain + "api/employees"
+
+        let data = try await prepareUrlRequest(uri: "api/employees")
+
+        return try JSONDecoder().decode([Employee].self, from: data)
+
+    }
+
+    static func getEmployeeDetails (idEmployee: String) async throws -> DetailEmployeeData {
+
+        let data = try await prepareUrlRequest(uri: "api/employee/"+String(idEmployee))
+
+        return try JSONDecoder().decode(DetailEmployeeData.self, from: data)
+
+    }
+
+    static func prepareUrlRequest(uri: String) async throws -> Data {
+
+        let url = domain + uri
 
         guard let url = URL(string: url) else {
             throw ApiError.urlError
@@ -19,7 +37,8 @@ class ApiService {
         let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 1000)
 
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
-        return try JSONDecoder().decode([Employee].self, from: data)
+
+        return data
 
     }
 

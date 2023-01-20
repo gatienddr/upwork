@@ -7,12 +7,20 @@
 
 import Foundation
 
-class EmployeeDetailViewModel {
-
+class EmployeeDetailViewModel: ObservableObject {
     var idUser: String
+
+    @Published var detailUser: DetailEmployeeData?
 
     init(idUser: String) {
         self.idUser = idUser
-    }
+        Task {
+            do {
+                detailUser = try await ApiService.getEmployeeDetails(idEmployee: idUser)
+            } catch {
+                print(error)
+            }
+        }
 
+    }
 }
