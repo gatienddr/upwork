@@ -10,6 +10,7 @@ import Foundation
 @MainActor class EmployeesListViewModel: ObservableObject {
 
     @Published var employees: [Employee] = []
+
     init() {
         Task {
             do {

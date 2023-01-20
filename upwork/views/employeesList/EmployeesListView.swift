@@ -27,7 +27,7 @@ struct EmployeesListView: View {
                             VStack {}
                                 .frame(width: 10, height: 10)
                                 .background(content: {
-                                    Color(employee.isWorking ? .green : .red)
+                                    Color(employee.isWorking ?? false ? .green : .red)
                                 })
                                 .cornerRadius(5)
                             Text("\(employee.name)")

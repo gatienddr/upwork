@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmployeeDetailView: View {
 
-    private var viewModel: EmployeeDetailViewModel
+    @ObservedObject private var viewModel: EmployeeDetailViewModel
 
     init(viewModel: EmployeeDetailViewModel) {
         self.viewModel = viewModel
@@ -26,16 +26,32 @@ struct EmployeeDetailView: View {
 
             HStack {
                 Spacer()
-                SmallTileView(viewModel: SmallTileViewModel(topWord: "25h", subWord: "travaillées"))
+                SmallTileView(
+                    viewModel: SmallTileViewModel(
+                        topWord: "\(viewModel.detailUser?.today.workedHours ?? "empty")",
+                        subWord: "travaillées")
+                )
 
-                SmallTileView(viewModel: SmallTileViewModel(topWord: "2h", subWord: "crédit"))
-                    .padding([.leading], 2)
+                SmallTileView(
+                    viewModel: SmallTileViewModel(
+                        topWord: "\(viewModel.detailUser?.today.credit ?? "empty")",
+                        subWord: "crédit")
+                )
+                .padding([.leading], 2)
 
-                SmallTileView(viewModel: SmallTileViewModel(topWord: "7h30", subWord: "arrivée"))
-                    .padding([.leading], 2)
+                SmallTileView(
+                    viewModel: SmallTileViewModel(
+                        topWord: "\(viewModel.detailUser?.today.startHour ?? "empty")",
+                        subWord: "arrivée")
+                )
+                .padding([.leading], 2)
 
-                SmallTileView(viewModel: SmallTileViewModel(topWord: "17h", subWord: "départ"))
-                    .padding([.leading], 2)
+                SmallTileView(
+                    viewModel: SmallTileViewModel(
+                        topWord: "\(viewModel.detailUser?.today.endHour ?? "empty")",
+                        subWord: "départ")
+                )
+                .padding([.leading], 2)
 
                 Spacer()
             }
@@ -47,48 +63,13 @@ struct EmployeeDetailView: View {
                 .padding()
 
             List {
-
-                HStack {
-                    Text("11 janvier 2022")
-                    Spacer()
-                    Text("7h30")
-                }
-                .listRowBackground(Color(UIColor(named: "ListLightGreenColor")!))
-
-                HStack {
-                    Text("10 janvier 2022")
-                    Spacer()
-                    Text("Absent")
-                }
-                .listRowBackground(Color(UIColor(named: "ListLightRedColor")!))
-
-                HStack {
-                    Text("9 janvier 2022")
-                    Spacer()
-                    Text("Absent")
-                }
-                .listRowBackground(Color(UIColor(named: "ListLightRedColor")!))
-
-                HStack {
-                    Text("8 janvier 2022")
-                    Spacer()
-                    Text("7h44 travaillées")
-                }
-                .listRowBackground(Color(UIColor(named: "ListLightGreenColor")!))
-
-                HStack {
-                    Text("7 janvier 2022")
-                    Spacer()
-                    Text("7h44 travaillées")
-                }
-                .listRowBackground(Color(UIColor(named: "ListLightGreenColor")!))
-
-                HStack {
-                    Text("6 janvier 2022")
-                    Spacer()
-                    Text("7h44 travaillées")
-                }
-                .listRowBackground(Color(UIColor(named: "ListLightGreenColor")!))
+                ForEach(viewModel.detailUser?.workedDays ?? []) { workedDay in
+                        HStack {
+                            Text("\(workedDay.date)")
+                            Spacer()
+                            Text("\(workedDay.workedHours)")
+                        }
+                    }
 
             }
 
