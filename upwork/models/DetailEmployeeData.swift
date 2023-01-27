@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Welcome
 struct DetailEmployeeData: Codable {
 
-    let employee: Employee
+    let employee: Employee?
     let today: Today
     let workedDays: [WorkedDay]
 }

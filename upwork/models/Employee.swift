@@ -9,7 +9,7 @@ import Foundation
 
 class Employee: Identifiable, Codable {
 
-    var id: String
+    var id: Int
 
     var name: String
 
@@ -17,7 +17,7 @@ class Employee: Identifiable, Codable {
 
     var records: [Record]?
 
-    init(id: String, name: String, isWorking: Bool?) {
+    init(id: Int, name: String, isWorking: Bool?) {
         self.id = id
         self.name = name
         self.isWorking = isWorking

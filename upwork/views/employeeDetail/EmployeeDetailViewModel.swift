@@ -8,11 +8,11 @@
 import Foundation
 
 class EmployeeDetailViewModel: ObservableObject {
-    var idUser: String
+    var idUser: Int
 
     @Published var detailUser: DetailEmployeeData?
 
-    init(idUser: String) {
+    init(idUser: Int) {
         self.idUser = idUser
         Task {
             do {

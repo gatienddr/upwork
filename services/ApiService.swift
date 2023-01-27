@@ -18,7 +18,7 @@ class ApiService {
 
     }
 
-    static func getEmployeeDetails (idEmployee: String) async throws -> DetailEmployeeData {
+    static func getEmployeeDetails (idEmployee: Int) async throws -> DetailEmployeeData {
 
         let data = try await prepareUrlRequest(uri: "api/employee/"+String(idEmployee))
 
