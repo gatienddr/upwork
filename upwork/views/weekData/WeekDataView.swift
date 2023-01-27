@@ -28,8 +28,7 @@ struct WeekDataView: View {
                     viewModel: WeekDataCardViewModel(
                         image: "working-time",
                         dataText: String(
-                            format: "%.0f heures",
-                            viewModel.weekData?.hoursWorked ?? 0
+                          describing: viewModel.weekData?.hoursWorked ?? "0"
                         ),
                         subText: "",
                         isAlignVertically: false
@@ -38,8 +37,8 @@ struct WeekDataView: View {
                 HStack {
                     WeekDataCard(
                         viewModel: WeekDataCardViewModel(
-                            image: "diagram",
-                            dataText: "\((viewModel.weekData?.numberOfEmployees ?? 0)) heures par",
+                            image: "division",
+                            dataText: "\((viewModel.weekData?.numberOfEmployees ?? 0))",
                             subText: "employé.e.(s)"
                         )
                     )

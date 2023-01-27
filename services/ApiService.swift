@@ -30,6 +30,9 @@ class ApiService {
 
         let data = try await prepareUrlRequest(uri: "api/statistics")
 
+        if let JSONString = String(data: data, encoding: String.Encoding.utf8) {
+           print(JSONString)
+        }
         return try JSONDecoder().decode(WeekData.self, from: data)
     }
 

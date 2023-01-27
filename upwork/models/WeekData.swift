@@ -8,7 +8,7 @@
 import Foundation
 
 struct WeekData: Codable {
-    var hoursWorked: Float?
+    var hoursWorked: String?
     var numberOfEmployees: Int?
     var averageWorkedHoursByEmployee: Float?
     var hoursWorkedByDay: Float?
