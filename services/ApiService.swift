@@ -8,9 +8,9 @@
 import Foundation
 
 class ApiService {
-    static let domain = "http://172.20.10.3:3000/"
+    static let domain = "http:/192.168.65.197:3000/"
 
-    static func getEmpoloyees() async throws -> [Employee] {
+    static func getEmployees() async throws -> [Employee] {
 
         let data = try await prepareUrlRequest(uri: "api/employees")
 
@@ -24,6 +24,13 @@ class ApiService {
 
         return try JSONDecoder().decode(DetailEmployeeData.self, from: data)
 
+    }
+
+    static func getWeedData() async throws -> WeekData {
+
+        let data = try await prepareUrlRequest(uri: "api/statistics")
+
+        return try JSONDecoder().decode(WeekData.self, from: data)
     }
 
     static func prepareUrlRequest(uri: String) async throws -> Data {

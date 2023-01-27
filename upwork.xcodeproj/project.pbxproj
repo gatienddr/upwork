@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C6F6A6222969F19F001B4DAB /* WeekData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F6A6212969F19F001B4DAB /* WeekData.swift */; };
 		D503AC9929701A3E00296C99 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503AC9829701A3E00296C99 /* ApiService.swift */; };
+		D52DFBC9298285D300F6E005 /* WeekDataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52DFBC8298285D300F6E005 /* WeekDataCard.swift */; };
+		D52DFBCD2982864D00F6E005 /* WeekDataCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52DFBCC2982864D00F6E005 /* WeekDataCardViewModel.swift */; };
 		D56FB04C2971480900864A6E /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FB04B2971480900864A6E /* Record.swift */; };
 		D56FB04E2971483700864A6E /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FB04D2971483700864A6E /* ApiError.swift */; };
 		D56FB050297171E500864A6E /* DetailEmployeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FB04F297171E500864A6E /* DetailEmployeeData.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		C6F6A6212969F19F001B4DAB /* WeekData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekData.swift; sourceTree = "<group>"; };
 		D503AC9829701A3E00296C99 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		D52DFBC8298285D300F6E005 /* WeekDataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataCard.swift; sourceTree = "<group>"; };
+		D52DFBCC2982864D00F6E005 /* WeekDataCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataCardViewModel.swift; sourceTree = "<group>"; };
 		D56FB048297144D500864A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D56FB04B2971480900864A6E /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		D56FB04D2971483700864A6E /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 			);
 			name = services;
 			path = ../services;
+			sourceTree = "<group>";
+		};
+		D52DFBCB2982863400F6E005 /* weekDataCard */ = {
+			isa = PBXGroup;
+			children = (
+				D52DFBC8298285D300F6E005 /* WeekDataCard.swift */,
+				D52DFBCC2982864D00F6E005 /* WeekDataCardViewModel.swift */,
+			);
+			path = weekDataCard;
 			sourceTree = "<group>";
 		};
 		D5F40F9629680FAD00878B00 = {
@@ -124,6 +137,7 @@
 		D5F40FB62968162F00878B00 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D52DFBCB2982863400F6E005 /* weekDataCard */,
 				D5F40FCA29686B7500878B00 /* smallTile */,
 				D5F40FB72968166200878B00 /* tabbar */,
 				D5F40FB0296813E600878B00 /* employeesList */,
@@ -265,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F40FA529680FAD00878B00 /* TabbarView.swift in Sources */,
+				D52DFBCD2982864D00F6E005 /* WeekDataCardViewModel.swift in Sources */,
 				D56FB04E2971483700864A6E /* ApiError.swift in Sources */,
 				C6F6A6222969F19F001B4DAB /* WeekData.swift in Sources */,
 				D5F40FA329680FAD00878B00 /* UpworkApp.swift in Sources */,
@@ -273,6 +288,7 @@
 				D5F40FC92968203F00878B00 /* Employee.swift in Sources */,
 				D5F40FCC2968704400878B00 /* SmallTileView.swift in Sources */,
 				D56FB04C2971480900864A6E /* Record.swift in Sources */,
+				D52DFBC9298285D300F6E005 /* WeekDataCard.swift in Sources */,
 				D5F40FBB296816EA00878B00 /* TabbarViewModel.swift in Sources */,
 				D5F40FCE296870C100878B00 /* SmallTileViewModel.swift in Sources */,
 				D5F40FB5296814E300878B00 /* EmployeeDetailView.swift in Sources */,
